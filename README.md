@@ -1,6 +1,6 @@
 # 🧠 Awesome LLM Agent Simulation Papers
 
-> A hand-curated, daily-updated catalog of **arXiv papers on LLM-based agent simulation, multi-agent systems, city & society simulation, and LLM alignment & safety.** Every entry is classified with a two-pass Claude rubric so the list stays short and on-topic.
+> Latest research on **LLM agents**, **multi-agent systems**, **generative agent simulation**, **agent-based modeling of societies & cities**, **RLHF & alignment methods**, **red-teaming**, **misalignment and sycophancy studies**, and **AI safety benchmarks** — updated daily from arXiv.
 
 **91 papers** across **2 days**.
 
