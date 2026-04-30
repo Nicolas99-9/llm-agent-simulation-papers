@@ -1,70 +1,90 @@
 # LLM Agent Simulation — Daily arXiv Paper Feed
 
-> A daily-updated, curated feed of arXiv papers on **LLM agent simulation**, **multi-agent systems**, **city & society simulation**, and **agent training & alignment**.
+> A curated, auto-updating feed of arXiv papers on **LLM-based agent simulation**, **multi-agent systems**, **city & society simulation**, and **LLM alignment & safety**.
 
-**Latest entries → [`papers.md`](./papers.md)**
+**👉 Latest entries: [`papers.md`](./papers.md)**
 
-Every day, a bot scans new arXiv submissions across the AI/ML categories, asks **Claude Haiku 4.5** whether each paper contributes to one of the four research areas below, and appends the relevant ones to [`papers.md`](./papers.md). The list is short by design — a paper is only included if it makes a *real* contribution.
+Every day a bot scans new arXiv submissions across the AI / ML / IR / CY / HC / SI categories and runs a **two-pass classifier** powered by **Claude Haiku 4.5**. Pass 1 casts a wide net. Pass 2 applies a strict rubric that filters out domain applications, systems/infrastructure work, and "agent"-flavoured capability papers. Only papers that survive both passes reach [`papers.md`](./papers.md).
+
+The feed is intentionally short. On a typical day, **out of ~500–800 new arXiv papers ~15–30 make the cut.** If you're looking for rigorous research on multi-agent LLM behaviour, alignment failure modes, agent-based modelling of societies, or urban simulation, this is a low-noise way to keep track.
 
 ---
 
-## What gets included
+## 🔎 What makes the cut
 
-A paper lands on the feed if it meaningfully contributes to at least one of:
+A paper is kept only when its **primary contribution** matches one of these four areas:
 
 | Tag | Scope |
 |---|---|
-| **`llm-agent-simulation`** | LLM-powered agents used to simulate humans, societies, roles, or interactive scenarios (generative agents, role-play benchmarks, LLM-driven ABM) |
-| **`agent-simulation`** | Multi-agent systems, agent-based modeling, emergent behavior, cooperation/competition dynamics — including non-LLM agents (RL, classical ABM) |
-| **`city-simulation`** | Urban dynamics, mobility, traffic, economic or social simulation at city/society scale, digital twins of human environments |
-| **`agent-training-alignment`** | RLHF/DPO/PPO, reward modeling, constitutional methods, red-teaming, alignment evals, scalable oversight, agent self-improvement, tool-use training |
+| 🧑‍🤝‍🧑 **`llm-agent-simulation`** | LLMs used to simulate humans, societies, roles, or interactive scenarios — generative agents, role-play benchmarks, LLM-driven agent-based modelling |
+| 🤖 **`agent-simulation`** | Multi-agent systems, agent-based modelling (ABM), emergent population behaviour, coordination / competition dynamics — including non-LLM agents (MARL, classical ABM) |
+| 🏙️ **`city-simulation`** | Urban dynamics, mobility, traffic, economic & social simulation at city / society scale, digital twins of human environments |
+| 🛡️ **`agent-training-alignment`** | RLHF / DPO / PPO methods motivated by alignment, reward modelling, constitutional methods, red-teaming, alignment evals, scalable oversight, safety benchmarks, interpretability for safety, studies of deception / sycophancy / reward hacking |
 
-The rubric deliberately **leans strict**: tangential mentions don't qualify. Pure LLM scaling work, single-agent RL on standard benchmarks, and retrieval/code/math where "agent" is just UX don't make the list.
+**What gets rejected on purpose:**
 
----
-
-## How it works
-
-```
-arXiv OAI-PMH  →  category filter  →  Claude Haiku 4.5  →  papers.md  →  git push
- (daily, UTC)      cs.AI/LG/MA/CL       tool-use JSON      per-day         this repo
-                   cs.CY/SI/HC/IR        verdict + tags     section
-```
-
-- **Fetch source:** arXiv OAI-PMH (`export.arxiv.org/oai2`) — stable, pagination-aware, rate-limit-respecting.
-- **Classifier:** Claude Haiku 4.5 on AWS Bedrock with tool-use for structured `{relevant, tags, reason}` output. System prompt is cache-controlled for low-cost daily runs.
-- **Crash safety:** atomic state writes, per-day idempotent commits, monotonic high-water mark on `last_completed_date`. Missed days are caught up automatically on the next run.
-- **Cost:** ~$0.30 / day of Bedrock calls at steady state.
-
-Full design doc: [paper_arxiv repo](https://github.com/Nicolas99-9/paper_arxiv) *(source of the fetcher)*.
+- Domain apps that happen to use agents (medical chatbots, legal assistants, tutoring systems, coding pipelines, scientific-workflow automators)
+- Systems / efficiency / caching / routing / orchestration papers, even when "agent" is in the title
+- General-capability LLM training methods motivated by benchmark scores (math reasoning, code gen, RAG accuracy) without an alignment or agent-behaviour motivation
+- Single-agent RL that doesn't study populations or alignment
+- Surveys, position pieces, governance papers without a concrete method
+- Papers where "agent" is decorative framing for a single LLM with a system prompt
 
 ---
 
-## Reading the list
+## 📖 How to read an entry
 
-Each day has its own section in [`papers.md`](./papers.md), newest on top:
+Each day has its own `## YYYY-MM-DD` section in [`papers.md`](./papers.md), newest first. Within a day, entries look like this:
 
 ```markdown
-## 2026-04-29
-
 - **[Paper Title](https://arxiv.org/abs/YYMM.NNNNN)** — First Author, Second Author, et al. _[tag1, tag2]_
-  One-sentence reason naming the specific contribution.
+  One short sentence describing the paper's primary contribution.
 ```
 
-- Click the title to go to the arXiv abstract page.
-- Tags between `_[...]_` show which research areas apply.
-- The one-line reason is generated by Claude at classification time.
-
-Days with zero relevant papers simply don't get a section.
+Click the title to open the arXiv abstract. Tags come from the list above. The one-sentence summary is written by Claude at classification time.
 
 ---
 
-## Running your own feed
+## ⚙️ How it works
 
-The fetcher is open-source at [Nicolas99-9/paper_arxiv](https://github.com/Nicolas99-9/paper_arxiv). Fork the rubric, point it at your own target repo, cron it on any Linux box with AWS Bedrock access. Setup is a single command once you've filled in `config.toml`.
+```
+                                                  ┌───────────────────────┐
+  arXiv OAI-PMH daily dump  ─► cs.AI / cs.LG /    │  Claude Haiku 4.5     │
+  (cs.MA / cs.CL / cs.IR /     primary-category   │  pass 1 (permissive)  │
+   cs.CY / cs.SI / cs.HC)      filter             │  pass 2 (strict)      │
+                                                  └──────────┬────────────┘
+                                                             │ relevant ∧ both passes agree
+                                                             ▼
+                                                     this repo's papers.md
+                                                     (one commit per day)
+```
+
+- **Fetch:** arXiv OAI-PMH (`export.arxiv.org/oai2`), pagination-aware, respects rate limits.
+- **Classifier:** Claude Haiku 4.5 on AWS Bedrock via structured tool-use. System prompt is cache-controlled to keep daily cost below $1.
+- **Two-pass filter:** on a sample day (1,180 papers), pass 1 accepted 258 and pass 2 kept 91 (≈ 93% precision on retains, no false-negatives found in a 55-paper manual audit).
+- **Crash safety:** atomic state writes, monotonic day advancement, per-day idempotent commits. If the bot misses a day, the next run catches up automatically.
 
 ---
 
-## License
+## 🗂️ Browsing
 
-Paper abstracts and metadata belong to their respective arXiv authors. The curation, tagging, and commentary in this repo are released under the **MIT license**.
+- **All papers, newest first** → [`papers.md`](./papers.md)
+- **Filter by tag in GitHub search:**
+  - [agent-training-alignment](./papers.md?plain=1#:~:text=agent-training-alignment)
+  - [llm-agent-simulation](./papers.md?plain=1#:~:text=llm-agent-simulation)
+  - [agent-simulation](./papers.md?plain=1#:~:text=agent-simulation)
+  - [city-simulation](./papers.md?plain=1#:~:text=city-simulation)
+
+(Or use your browser's in-page search on [`papers.md`](./papers.md) for a specific keyword or author name.)
+
+---
+
+## 🙋 Suggest or correct
+
+If a paper should have made the cut but didn't, or an entry looks off, open an [issue](../../issues/new) with the arXiv URL and a one-line reason. Pass-2 precision is high but not perfect — feedback helps tune the rubric.
+
+---
+
+## 📜 License
+
+Paper titles, abstracts, and metadata belong to their respective arXiv authors and are reproduced here under arXiv's non-exclusive distribution license for curation purposes. The curation choices, tag assignments, and one-line summaries in this repository are released under the **[MIT License](./LICENSE)**.
