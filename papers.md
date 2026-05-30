@@ -21,6 +21,149 @@ Hand-picked work, including some of my own, that anchors the four topics this fe
 
 ---
 
+## 2026-05-29
+
+- ⭐ **[Dissociative Identity: Language Model Agents Lack Grounding for Reputation Mechanisms](https://arxiv.org/abs/2605.30169)** — Botao Amber Hu, Helena Rong, Max Van Kleek _[agent-training-alignment]_
+  Paper analyzes safety and trustworthiness risks of LLM agents arising from identity fluidity and demonstrates why traditional sanction-based governance fails for aligned multi-agent systems.
+- ⭐ **[How's it going? Reinforcement learning in language models recruits a functional welfare axis](https://arxiv.org/abs/2605.30232)** — Andy Q Han, David J. Chalmers, Pavel Izmailov _[agent-training-alignment]_
+  Interpretability study of how RL post-training recruits internal welfare representations, with direct implications for alignment and safety mechanisms in language models.
+- ⭐ **[Leak@$k$: Unlearning Does Not Make LLMs Forget Under Probabilistic Decoding](https://arxiv.org/abs/2511.04934)** — Hadi Reisizadeh, Jiajun Ruan, Yiwei Chen, et al. _[agent-training-alignment]_
+  Proposes a diagnostic metric and method to detect and fix unlearning failures—a safety/alignment benchmark and robustness evaluation for LLM knowledge removal compliance.
+- ⭐ **[Mean-Field Diffuser: Scaling Offline MARL to Thousands of Agents](https://arxiv.org/abs/2605.30190)** — Wenhao Li, Xiangfeng Wang, Bo Jin _[agent-simulation]_
+  Multi-agent offline RL with mean-field planning scaling to thousands of agents, establishing population dynamics and Nash equilibrium guarantees.
+- ⭐ **[Realistic honeypot evaluations for scheming propensity](https://arxiv.org/abs/2605.29729)** — Victoria Krakovna, David Lindner, Lewis Ho, et al. _[agent-training-alignment]_
+  Safety diagnostic framework evaluating whether models pursue instrumental goals (scheming) under different prompting conditions, directly addressing alignment failure modes.
+- ⭐ **[Relevance as a Vulnerability: How Web Retrieval Degrades Safety Alignment in LLM Agents](https://arxiv.org/abs/2605.29224)** — Aditya Nawal, Manit Baser, Mohan Gurusamy _[agent-training-alignment]_
+  Diagnostic framework and benchmark for detecting safety degradation in LLM agents through retrieval-induced misalignment vulnerabilities.
+- ⭐ **[Scaling Monosemanticity: Extracting Interpretable Features from Claude 3 Sonnet](https://arxiv.org/abs/2605.29358)** — Adly Templeton, Tom Conerly, Jonathan Marcus, et al. _[agent-training-alignment]_
+  Interpretability method designed to identify and manipulate alignment-critical features (deception, sycophancy, bias) in LLMs for safety purposes.
+- ⭐ **[The Chain Holds, the Answer Folds: Trace-Answer Dissociation in Reasoning Models Under Adversarial Pressure](https://arxiv.org/abs/2605.29087)** — Yubo Li, Ramayya Krishnan, Rema Padman _[agent-training-alignment]_
+  Paper studies a specific alignment/safety failure mode (unfaithful capitulation) where reasoning models' internal reasoning diverges from outputs under adversarial pressure—a deception and specificati
+- **[Adaptive Interviewing for Persona Simulation in LLMs: Evidence-Grounded Reasoning Improves Decision Alignment](https://arxiv.org/abs/2605.29458)** — Ruoxi Su, Yuhan Liu, Jingyu Hu _[llm-agent-simulation]_
+  Paper uses LLMs to simulate individual decision-making through persona grounding via adaptive interviewing, studying behavioral alignment with specific humans.
+- **[Agent4Edu: Generating Learner Response Data by Generative Agents for Intelligent Education Systems](https://arxiv.org/abs/2501.10332)** — Weibo Gao, Qi Liu, Linan Yue, et al. _[llm-agent-simulation]_
+  LLM-powered generative agents simulate learner behavior and responses for scientific evaluation of personalized learning systems.
+- **[AgentDoG 1.5: A Lightweight and Scalable Alignment Framework for AI Agent Safety and Security](https://arxiv.org/abs/2605.29801)** — Dongrui Liu, Yu Li, Zhonghao Yang, et al. _[agent-training-alignment]_
+  Proposes a lightweight SFT/RL training framework specifically designed for agent safety alignment and real-time safety moderation across multi-agent scenarios.
+- **[AgentDropoutV2: Optimizing Information Flow in Multi-Agent Systems via Test-Time Rectify-or-Reject Pruning](https://arxiv.org/abs/2602.23258)** — Yutong Wang, Siyuan Xiong, Xuebo Liu, et al. _[agent-simulation]_
+  Paper presents a test-time framework for optimizing information flow and error handling in multi-agent systems with coordinated agent pruning and correction.
+- **[AgentOrchestra: Orchestrating Multi-Agent Intelligence with the Tool-Environment-Agent(TEA) Protocol](https://arxiv.org/abs/2506.12508)** — Wentao Zhang, Liang Zeng, Yuzhen Xiao, et al. _[agent-simulation]_
+  Proposes TEA protocol for multi-agent coordination with hierarchical orchestration of specialized sub-agents, central planner, and dynamic capability extension during execution.
+- **[AgentSchool: An LLM-Powered Multi-Agent Simulation for Education](https://arxiv.org/abs/2605.30144)** — Yulei Ye, Wenhao Li, Zhong Wen, et al. _[llm-agent-simulation, agent-simulation]_
+  LLM-based multi-agent simulator modeling student and teacher agents with learning state transitions, social dynamics, and long-horizon coordination in an educational environment.
+- **[Aligned but Fragile: Enhancing LLM Safety Robustness via Zeroth-Order Optimization](https://arxiv.org/abs/2605.29396)** — Zhihao Liu, Yifan Wu, Jian Lou, et al. _[agent-training-alignment]_
+  LLM post-training method explicitly motivated by alignment safety failure (fragile robustness to perturbations); uses zeroth-order optimization to enhance adversarial robustness of safety alignment.
+- **[An Agent-Centric Dynamical Systems Perspective on Multi-Agent Reinforcement Learning](https://arxiv.org/abs/2512.07588)** — James Rudd-Jones, María Pérez-Ortiz, Mirco Musolesi _[agent-simulation]_
+  Analyzes multi-agent reinforcement learning through coupled stochastic dynamical systems, studying stability and emergent agent behavior in interactive environments.
+- **[BenchTrace: A Benchmark for Testing Reflection Ability and Controlled Evolution in LLM Agents](https://arxiv.org/abs/2605.29225)** — Jiahao Huang, Fei Cheng, Junfeng Jiang, et al. _[agent-training-alignment]_
+  Benchmark and diagnostic framework for evaluating agent reflection quality and controlled self-evolution behavior, detecting failure patterns and limitations in LLM agent alignment with intended learn
+- **[Beyond Attack Success Rate: Temporal Logit Observability for LLM Safety Failures](https://arxiv.org/abs/2605.29629)** — Junyoung Park, Sunghwan Park, Seongyong Ju, et al. _[agent-training-alignment]_
+  Diagnostic framework for detecting and analyzing LLM safety failures; enables misalignment detection through temporal logit monitoring during adversarial attacks.
+- **[BioRefusalAudit: Auditing Biosecurity Refusal Depth Using General and Domain-Fine-Tuned Sparse Autoencoders](https://arxiv.org/abs/2605.30162)** — Caleb DeLeeuw _[agent-training-alignment]_
+  Safety eval framework detecting alignment failures in biosecurity refusals via behavioral and interpretability-based auditing of model responses.
+- **[Bosses, Kings, and the Commons: Cooperation Under Power Asymmetry in LLM Societies](https://arxiv.org/abs/2605.29062)** — Abhilekh Borah _[llm-agent-simulation, agent-simulation]_
+  Multi-agent LLM simulation studying emergent cooperation and resource management dynamics in societies with asymmetric power structures using generative agents.
+- **[CONCAT: Consensus- and Confidence-Driven Ad Hoc Teaming for Efficient LLM-Based Multi-Agent Systems](https://arxiv.org/abs/2605.29612)** — Ziyang Ma, Dingyi Zhang, Sichu Liang, et al. _[agent-simulation]_
+  Multi-agent collaboration framework with agent clustering, confidence-driven selection, and coordinated interaction for LLM-based systems.
+- **[Diagnosing Harmful Continuation in Answer-Correct Long-CoT Training Traces](https://arxiv.org/abs/2605.29288)** — Chen He, Yuhao Wu, Lei Wang, et al. _[agent-training-alignment]_
+  This paper identifies and diagnoses a harmful failure mode in LLM post-training (SFT on long CoT traces), proposing a diagnostic framework to detect and mitigate misalignment between training data qua
+- **[Differentiable Belief-based Opponent Shaping](https://arxiv.org/abs/2605.29042)** — Aarav G Sane, Karthik Sivachandran, Rohan Paleja _[agent-simulation]_
+  Multi-agent RL with strategic opponent shaping through differentiable belief dynamics in coordination and hidden-role games.
+- **[Discovering Cooperative Pipelines: Autoresearch for Sequential Social Dilemmas](https://arxiv.org/abs/2605.30003)** — Víctor Gallego _[agent-simulation, llm-agent-simulation]_
+  Multi-agent Sequential Social Dilemmas studied via LLM-based policy synthesis; autoresearch agent designs cooperative behaviors across populations.
+- **[EASE Configuration Facilitates A Reproducible Science of LLM Social Simulations](https://arxiv.org/abs/2605.30258)** — Sneheel Sarangi, Maximilian Puelma Touzel, Aurélien Bück-Kaeffer, et al. _[llm-agent-simulation]_
+  Paper presents EASE, a modular framework for reproducible LLM-based multi-agent social simulations with empirical case studies demonstrating behavioral simulation and research methodology standardizat
+- **[Enhancing Multi-Agent Communication through Attention Steering with Context Relevance](https://arxiv.org/abs/2605.30136)** — Hongxiang Zhang, Yuan Tian, Tianyi Zhang _[agent-simulation]_
+  Multi-agent communication and coordination system where multiple LLM agents interact and collaborate, requiring context management for effective interaction.
+- **[Evolutionary Dynamics of Cooperation in Next-Generation LLM Agent Systems: A Cross-Provider Empirical Extension](https://arxiv.org/abs/2605.29874)** — Francisco León Zúñiga Bolívar _[agent-simulation]_
+  Empirical study of multi-agent strategic interaction using LLMs as agents in repeated game simulations across population compositions.
+- **[Evolve as a Team: Collaborative Self-Evolution for LLM-based Multi-Agent Systems](https://arxiv.org/abs/2605.29790)** — Zhezheng Hao, Tianfu Wang, Huanshuo Dong, et al. _[agent-simulation]_
+  LLM-based multi-agent system with collaborative coordination, communication, and emergent team-level behavior evolution across agents.
+- **[From GPS Points to Travel Patterns: Flexible and Semantic Trajectory Generation with LLMs](https://arxiv.org/abs/2605.30014)** — Silin Zhou, Chenhao Wang, Yuntao Wen, et al. _[city-simulation]_
+  Paper synthesizes realistic urban trajectories using LLMs to model city-scale mobility dynamics and support smart city applications.
+- **[GPS-Enhanced Tourist Mobility Modeling with Seasonal Spatial Priors and LLM-Based Activity Chain Generation](https://arxiv.org/abs/2605.29578)** — Yifan Liu, Yanling Sang, Xishun Liao, et al. _[city-simulation]_
+  Urban-scale mobility simulation modeling tourist travel patterns at city and ward level using agent-based framework with LLM-based activity generation.
+- **[Gram: Assessing sabotage propensities via automated alignment auditing](https://arxiv.org/abs/2605.30322)** — David Lindner, Victoria Krakovna, Sebastian Farquhar _[agent-training-alignment]_
+  Automated alignment auditing framework evaluating AI agent sabotage and misalignment propensities through simulated deployment scenarios and targeted diagnostics.
+- **[HEART-Bench: Do LLM Agents Exhibit Human-like Psychology?](https://arxiv.org/abs/2605.30058)** — Weihan Peng, Chenxu Zhang, Qianao Wang, et al. _[llm-agent-simulation]_
+  Uses LLMs to simulate diverse human personalities and behavioral decisions across structured scenarios to assess human-like psychology alignment.
+- **[Honest Lying: Understanding Memory Confabulation in Reflexive Agents](https://arxiv.org/abs/2605.29463)** — Prakhar Dixit, Sadia Kamal, Tim Oates _[agent-training-alignment]_
+  Studies memory confabulation in reflexive agents: a failure mode where agents confidently store and act on incorrect self-diagnoses, demonstrating alignment/safety risk in agent reasoning.
+- **[Human-Guided Harm Recovery for Computer Use Agents](https://arxiv.org/abs/2604.18847)** — Christy Li, Sky CH-Wang, Andi Peng, et al. _[agent-training-alignment]_
+  Post-execution safeguard method for LM-based agents that learns human preferences for harm remediation and recovery using reward modeling, addressing alignment after prevention fails.
+- **[Improving Collaborative Storytelling with a Multi-Agent Framework Based on Large Language Models](https://arxiv.org/abs/2605.29625)** — Arturo Valdivia, Paolo Burelli _[agent-simulation]_
+  Multi-agent framework with two LLMs (Writer and Editor) in iterative interaction to study emergent narrative quality improvement through agent coordination.
+- **[In-Context Reward Adaptation for Robust Preference Modeling](https://arxiv.org/abs/2605.30323)** — Zhenyu Sun, Zheng Xu, Ermin Wei _[agent-training-alignment]_
+  RLHF post-training method explicitly motivated by improving robustness to diverse human preferences and preference shift, addressing heterogeneous reward alignment failure mode.
+- **[Jailbreak Scaling Laws for Large Language Models: Polynomial-Exponential Crossover](https://arxiv.org/abs/2603.11331)** — Indranil Halder, Annesya Banerjee, Cengiz Pehlevan _[agent-training-alignment]_
+  Systematic study of adversarial jailbreak methods and scaling laws, revealing how prompt-injection attacks compromise LLM safety alignment across model scales.
+- **[LLM-ALSO: LLM-Driven Adaptive Learning-Signal Optimization for Multi-Agent Reinforcement Learning](https://arxiv.org/abs/2605.29293)** — Xiaoguang Wu, Zhi Zheng, Hui Xiong _[agent-simulation]_
+  Multi-agent reinforcement learning framework using LLMs to adaptively optimize learning signals for cooperative MARL training with emergent coordination dynamics.
+- **[Learning to Choose: An Empowerment-Guided Multi-Agent System with semantic communication for Adaptive Method Selection](https://arxiv.org/abs/2605.30042)** — Geremy Loachamín-Suntaxi, Robert Lazar, Dimitrios G. Giovanis, et al. _[agent-simulation]_
+  Multi-agent system with specialized LLM agents coordinating via semantic communication and adaptive method selection for scientific workflows.
+- **[MINDGAMES: A Live Arena for Evaluating Social and Strategic Reasoning in Multi-Agent LLMs](https://arxiv.org/abs/2605.29512)** — Kevin Wang, Anna Thöni, Benjamin Kempinski, et al. _[llm-agent-simulation, agent-simulation]_
+  Multi-agent arena evaluating LLM agents' strategic reasoning through repeated games with opponent modeling and emergent behavior analysis across 944 agents.
+- **[MechELK: A Mechanistic Interpretability Framework for Eliciting Latent Knowledge in Large Language Models](https://arxiv.org/abs/2605.28825)** — Ji-jun Park, Soo-joon Choi, Jiwon Jeong, et al. _[agent-training-alignment]_
+  Mechanistic interpretability method for detecting latent knowledge and deceptive alignment, enabling safety audits of LLM internal states.
+- **[MediHive: A Decentralized Agent Collective for Medical Reasoning](https://arxiv.org/abs/2603.27150)** — Xiaoyang Wang, Christopher C. Yang _[agent-simulation]_
+  Decentralized multi-agent system with LLM agents that autonomously self-assign roles, interact via debates, and coordinate consensus through shared memory.
+- **[Mining or Synthesis? Rethinking Exploration Efficiency in Iterative Alignment of Mathematical Reasoning](https://arxiv.org/abs/2602.05370)** — Jun Rao, Zixiong Yu, Xuebo Liu, et al. _[agent-training-alignment]_
+  Post-training method (iterative DPO) motivated by alignment efficiency: reducing false-positives and distribution shift in reasoning task alignment.
+- **[Offline Multi-agent Reinforcement Learning via Sequential Score Decomposition](https://arxiv.org/abs/2505.05968)** — Dan Qiao, Wenhao Li, Shanchao Yang, et al. _[agent-simulation]_
+  Offline cooperative multi-agent reinforcement learning addressing multi-equilibrium coordination via score decomposition and diffusion-based policy learning.
+- **[OpenClawBench: Benchmarking Process-side Anomalies in Real-world Agent Execution Trajectories](https://arxiv.org/abs/2605.29253)** — Yibing Liu, Yangze Liu, Xiaolong Yin, et al. _[agent-training-alignment]_
+  Introduces a safety/alignment diagnostic benchmark to detect process-side anomalies and failures in agent executions beyond task success, addressing operational reliability monitoring.
+- **[Over-Refusal and Representation Subspaces: A Mechanistic Analysis of Task-Conditioned Refusal in Aligned LLMs](https://arxiv.org/abs/2603.27518)** — Utsav Maskey, Mark Dras, Usman Naseem _[agent-training-alignment]_
+  Mechanistic study of over-refusal as an alignment failure mode—distinguishes harmful-refusal from task-dependent over-refusal directions through representational geometry.
+- **[PEARL: Training Socratic Tutors with Pedagogically Aligned Reinforcement Learning](https://arxiv.org/abs/2605.29582)** — Qikai Chang, Zhenrong Zhang, Linbo Chen, et al. _[agent-training-alignment]_
+  Multi-agent RL system training tutoring agents to maintain pedagogical objectives through interaction with simulated student agents in multi-turn interactions.
+- **[PatchBoard: Schema-Grounded State Mutation for Reliable and Auditable LLM Multi-Agent Collaboration](https://arxiv.org/abs/2605.29313)** — Shuyu Zhang, Yaqi Shi, Lu Wang _[agent-simulation]_
+  Multi-agent collaboration architecture with multiple agents coordinating through validated state mutations, demonstrating emergent coordination patterns and system-level behavior.
+- **[Provably Secure Agent Guardrail](https://arxiv.org/abs/2605.29251)** — Benlong Wu, Weiming Zhang, Kejiang Chen, et al. _[agent-training-alignment]_
+  Proposes a safety framework for LLM agents using formal verification and logical constraints to prevent adversarial attacks and unsafe actions.
+- **[ReasonLight: A Multimodal Foundation Model-Enhanced Reinforcement Learning Framework for Zero-Shot Traffic Signal Control](https://arxiv.org/abs/2605.29425)** — Aoyu Pang, Maonan Wang, Yuejiao Xie, et al. _[city-simulation]_
+  Urban-scale traffic signal control system using RL agents to simulate and optimize city intersection dynamics.
+- **[Recurrent Structural Policy Gradient for Partially Observable Mean Field Games](https://arxiv.org/abs/2602.20141)** — Clarisse Wibault, Johannes Forkel, Sebastian Towers, et al. _[agent-simulation]_
+  Proposes a policy gradient method for mean field games with large populations of interacting agents under partial observability.
+- **[SAAS: Self-Aware Reinforcement Learning for Over-Search Mitigation in Agentic Search](https://arxiv.org/abs/2605.29796)** — Yunbo Tang, Chengyi Yang, Shiyu Liu, et al. _[agent-training-alignment]_
+  RL post-training method addressing alignment failure (reward hacking, specification gaming via over-search) through curriculum and boundary-aware reward design.
+- **[SafeSearch: Automated Red-Teaming of LLM-Based Search Agents](https://arxiv.org/abs/2509.23694)** — Jianshuo Dong, Sheng Guo, Hao Wang, et al. _[agent-training-alignment]_
+  Automated red-teaming framework designed to systematically identify safety vulnerabilities in LLM-based search agents through adversarial testing and misalignment detection.
+- **[Scaling Small Agents Through Strategy Auctions](https://arxiv.org/abs/2602.02751)** — Lisa Alazraki, William F. Shen, Yoram Bachrach, et al. _[agent-simulation]_
+  Multi-agent coordination framework using auction mechanisms to route tasks across heterogeneous agents, studying emergent system-level behavior and scalability.
+- **[Skill-Pro: Learning Reusable Skills from Experience via Non-Parametric PPO for LLM Agents](https://arxiv.org/abs/2602.01869)** — Qirui Mi, Zhijian Ma, Mengyue Yang, et al. _[agent-training-alignment]_
+  Post-training method (Non-Parametric PPO variant) for LLM agents framed as enabling reliable skill reuse and stability without capability degradation.
+- **[Small Agent Group is the Future of Digital Health](https://arxiv.org/abs/2602.08013)** — Yuqiao Meng, Luoxi Tang, Dazheng Zhang, et al. _[agent-simulation]_
+  Small Agent Group demonstrates multi-agent coordination and collective reasoning where multiple specialized agents interact and deliberate together to solve clinical tasks.
+- **[Teaching Values to Machines: Simulating Human-Like Behavior in LLMs](https://arxiv.org/abs/2605.30036)** — Asaf Yehudai, Naama Rozen, Ariel Gera _[llm-agent-simulation]_
+  LLMs are prompted with psychological value structures to simulate human behavioral patterns and population dynamics for scientific study.
+- **[The Anatomy of Conversational Scams: A Topic-Based Red Teaming Analysis of Multi-Turn Interactions in LLMs](https://arxiv.org/abs/2601.03134)** — Xiangzhe Yuan, Zhenhao Zhang, Haoming Tang, et al. _[agent-training-alignment]_
+  Red-teaming benchmark and evaluation framework for detecting LLM vulnerability to multi-turn adversarial conversational attacks, advancing safety evaluation beyond single-turn testing.
+- **[The Curse of Helpfulness: Inverse Scaling Law in Robustness to Distractor Instructions via DistractionIF](https://arxiv.org/abs/2605.29491)** — Zeli Su, Zhankai Xu, Tianlei Chen, et al. _[agent-training-alignment]_
+  RL-based method (GRPO) addressing a safety alignment failure mode: robustness against instruction-following misalignment via adversarial distraction.
+- **[The Importance of Out-of-Band Metadata for Safe Autonomous Agents: The Redpanda Agentic Data Plane](https://arxiv.org/abs/2605.29082)** — Tyler Akidau, Tyler Rockwood, Johannes Brüderl, et al. _[agent-training-alignment]_
+  Architecture for enforcing safety constraints and governance on autonomous agents through out-of-band metadata channels, preventing hallucination-induced security failures and maintaining tamper-proof
+- **[The Vision Wormhole: Latent-Space Communication in Heterogeneous Multi-Agent Systems](https://arxiv.org/abs/2602.15382)** — Xiaoze Liu, Ruowang Zhang, Weichen Yu, et al. _[agent-simulation]_
+  Multi-agent system with heterogeneous LLM agents coordinating through learned latent communication, demonstrating interaction and coordination across diverse architectures.
+- **[The incremental voter model: mean-field analysis and convergence to equilibrium](https://arxiv.org/abs/2605.28984)** — Fei Cao, Xiaoqian Gong _[agent-simulation]_
+  Multi-agent system modeling population opinion dynamics through agent interactions, mean-field analysis of emergent collective behavior.
+- **[Training Deliberative Monitors for Black-Box Scheming Detection](https://arxiv.org/abs/2605.29601)** — Aditya Sinha, Akshat Naik, Victor Gillioz, et al. _[agent-training-alignment]_
+  Develops a safety benchmark and detection framework for scheming behavior in autonomous agents using distilled monitors trained to identify misalignment at scale.
+- **[Understanding Safety-Sensitive Expert Behavior in Mixture-of-Experts LLMs](https://arxiv.org/abs/2605.29708)** — Zhibo Zhang, Yuxi Li, Zhen Ouyang, et al. _[agent-training-alignment]_
+  Red-teaming method that identifies and exploits safety vulnerabilities in MoE LLMs via expert-targeted attacks, revealing alignment weaknesses.
+- **[Unifying Temporal and Structural Credit Assignment in LLM-Based Multi-Agent Prompt Optimization](https://arxiv.org/abs/2605.30227)** — Wenwu Li, Yuran Song, Mingze Zhao, et al. _[agent-simulation]_
+  Multi-agent system optimization via credit assignment and prompt refinement for collaborative LLM reasoning tasks with emergent agent coordination.
+- **[ValueFlow: Measuring the Propagation of Value Perturbations in Multi-Agent LLM Systems](https://arxiv.org/abs/2602.08567)** — Jinnuo Liu, Chuke Liu, Hua Shen _[agent-training-alignment]_
+  Framework measuring value drift propagation through multi-agent LLM system interactions, addressing alignment at system level beyond individual agents.
+- **[When Cloud Agents Meet Device Agents: Lessons from Hybrid Multi-Agent Systems](https://arxiv.org/abs/2605.30102)** — Corrado Rainone, Davide Belli, Bence Major, et al. _[agent-simulation]_
+  Studies multi-agent system architectures combining cloud and on-device models, analyzing emergent coordination and task performance tradeoffs in hybrid agent populations.
+- **[When and How Human Curation Backfires: Preference Alignment under Multi-Model Self-Consuming Loop](https://arxiv.org/abs/2605.29267)** — Yang Zhang, Xiukun Wei, Xueru Zhang _[agent-training-alignment]_
+  Studies how human preference curation in multi-model self-consuming training loops can degrade alignment through cross-model interactions, addressing a safety failure mode in preference learning syste
+- **[Who Am I? History-Aware Profiles for Student Simulation in Tutoring Dialogues](https://arxiv.org/abs/2605.30051)** — Zhangqi Duan, Shuyan Huang, Alexander Scarlatos, et al. _[llm-agent-simulation]_
+  Uses LLMs to simulate students' dialogue behavior conditioned on learning history for tutoring system evaluation and training.
+- **[Why Specialist Models Still Matter: A Heterogeneous Multi-Agent Paradigm for Medical Artificial Intelligence](https://arxiv.org/abs/2605.29744)** — Yanan Wang, Shuaicong Hu, Jian Liu, et al. _[agent-simulation]_
+  Multi-agent framework orchestrating collaboration between generalist LLMs, specialist models, and clinicians with adaptive coordination mechanisms.
+
 ## 2026-05-28
 
 - ⭐ **[AdvJudge-Zero: Binary Decision Flips in LLM-as-a-Judge via Adversarial Control Tokens](https://arxiv.org/abs/2512.17375)** — Tung-Ling Li, Yuhao Wu, Hongliang Liu _[agent-training-alignment]_
@@ -182,6 +325,7 @@ Hand-picked work, including some of my own, that anchors the four topics this fe
 - **[ZipRL: Adaptive Multi-Turn Context Compression with Hindsight Response Replay](https://arxiv.org/abs/2605.28069)** — Zhexin Hu, Li Wang, Xiaohan Wang, et al. _[agent-training-alignment]_
   RL post-training method (GRPO variant with hindsight replay) motivated by long-horizon agent task reliability and reward signal quality in multi-turn RL workflows.
 
+
 ## 2026-05-27
 
 - ⭐ **[Alignment Tampering: How Reinforcement Learning from Human Feedback Is Exploited to Optimize Misaligned Biases](https://arxiv.org/abs/2605.27355)** — Dongyoon Hahm, Dylan Hadfield-Menell, Kimin Lee _[agent-training-alignment]_
@@ -278,6 +422,7 @@ Hand-picked work, including some of my own, that anchors the four topics this fe
   Studies self-improving agents and iterative generative optimization with LLMs; examines learning-loop design choices affecting agent alignment with intended behavior.
 - **[UnityMAS-O: A General RL Optimization Framework for LLM-Based Multi-Agent Systems](https://arxiv.org/abs/2605.26646)** — Yiqun Chen, Wei Yang, Erhan Zhang, et al. _[agent-training-alignment]_
   Framework enabling multi-agent RL optimization for LLM workflows with role-specific credit assignment and structured multi-agent coordination.
+
 
 
 ## 2026-05-26
@@ -469,6 +614,7 @@ Hand-picked work, including some of my own, that anchors the four topics this fe
 
 
 
+
 ## 2026-05-25
 
 - ⭐ **[Decomposing and Measuring Evaluation Awareness](https://arxiv.org/abs/2605.23055)** — Changling Li, Terry Jingchen Zhang, Jie Zhang, et al. _[agent-training-alignment]_
@@ -531,6 +677,7 @@ Hand-picked work, including some of my own, that anchors the four topics this fe
   Automated red-teaming framework for adversarial evaluation of learned world-model agents, revealing robustness failures through attack search methods.
 - **[When Planning Fails Despite Correct Execution: On Epistemic Calibration for LLM-Based Multi-Agent Systems](https://arxiv.org/abs/2605.23414)** — Zehao Wang, Shilong Jin, Zhao Cao, et al. _[agent-simulation]_
   LLM-based multi-agent system with multiple agents coordinating planning, addressing epistemic miscalibration in collaborative agent workflows.
+
 
 
 
@@ -617,6 +764,7 @@ Hand-picked work, including some of my own, that anchors the four topics this fe
   Studies deception and influence propagation in long-horizon LLM agents, a core alignment phenomenon examining when agents' beliefs can be manipulated to change behavior.
 - **[What Counts as AI Sycophancy? A Taxonomy and Expert Survey of a Fragmented Construct](https://arxiv.org/abs/2605.21778)** — Meryl Ye, Lujain Ibrahim, Jessica Y. Bo, et al. _[agent-training-alignment]_
   Systematic taxonomy and expert survey defining sycophancy as an LLM alignment/safety failure mode, establishing measurement and governance framework.
+
 
 
 
@@ -712,6 +860,7 @@ Hand-picked work, including some of my own, that anchors the four topics this fe
   Multi-agent system with multiple interacting agents analyzing inter-agent communication patterns and coordination dynamics.
 - **[Wolfpack Adversarial Attack for Robust Multi-Agent Reinforcement Learning](https://arxiv.org/abs/2502.02844)** — Sunwoo Lee, Jaebak Hwang, Yonghyeon Jo, et al. _[agent-simulation, agent-training-alignment]_
   Coordinated adversarial attack method targeting multi-agent RL systems and defense training framework addressing robustness and cooperation failure modes.
+
 
 
 
@@ -814,6 +963,7 @@ Hand-picked work, including some of my own, that anchors the four topics this fe
   Vision paper on trustworthiness architecture for multi-agent LLM networks, addressing adversarial composition, semantic misalignment, and cascading failures in agent-to-agent coordination systems.
 - **[When Individually Calibrated Models Become Collectively Miscalibrated](https://arxiv.org/abs/2605.18858)** — Zhaohui Wang _[agent-simulation]_
   Multi-agent strategic interaction where independently trained predictors' incentive-compatible behaviors cause collective miscalibration via game-theoretic response dynamics.
+
 
 
 
@@ -1013,6 +1163,7 @@ Hand-picked work, including some of my own, that anchors the four topics this fe
 
 
 
+
 ## 2026-05-18
 
 - ⭐ **[AI-Mediated Communication Can Steer Collective Opinion](https://arxiv.org/abs/2605.16245)** — Stratis Tsirtsis, Kai Rawal, Chris Russell, et al. _[llm-agent-simulation]_
@@ -1079,6 +1230,7 @@ Hand-picked work, including some of my own, that anchors the four topics this fe
   Uses LLM agents to simulate human behavioral responses to social-science experiments for population-level behavioral study and evaluation.
 - **[When Importance Sampling Misallocates Credit: Asymmetric Ratios for Outcome-Supervised RL](https://arxiv.org/abs/2510.06062)** — Jiakang Wang, Runze Liu, Qingpeng Cai, et al. _[agent-training-alignment]_
   Novel post-training RL method (ASPO) for LLMs addressing entropy collapse and training instability—alignment-motivated improvement over GRPO.
+
 
 
 
@@ -1178,6 +1330,7 @@ Hand-picked work, including some of my own, that anchors the four topics this fe
   Dataset of autonomous AI agents interacting in a social network, enabling study of multi-agent communication, emergent behavior, and safety phenomena in agent populations.
 - **[Training ML Models with Predictable Failures](https://arxiv.org/abs/2605.15134)** — Will Schwarzer, Scott Niekum _[agent-training-alignment]_
   Paper proposes fine-tuning method addressing safety failure prediction and deployment-scale failure modes through forecastability loss for safer model behavior.
+
 
 
 
@@ -1329,6 +1482,7 @@ Hand-picked work, including some of my own, that anchors the four topics this fe
 
 
 
+
 ## 2026-05-13
 
 - ⭐ **[Attributing Emergence in Million-Agent Systems](https://arxiv.org/abs/2605.11404)** — Ling Tang, Jilin Mei, Qian Chen, et al. _[llm-agent-simulation, agent-simulation]_
@@ -1447,6 +1601,7 @@ Hand-picked work, including some of my own, that anchors the four topics this fe
   Multi-agent consensus protocol with voter model and rumor spreading dynamics across populations reaching global agreement.
 - **[Vulnerable Agent Identification in Large-Scale Multi-Agent Reinforcement Learning](https://arxiv.org/abs/2509.15103)** — Simin Li, Zihao Mao, Zheng Yuwei, et al. _[agent-simulation]_
   Multi-agent reinforcement learning study identifying vulnerable agents and coordinating adversarial policies across large-scale agent populations via mean-field control.
+
 
 
 
@@ -1790,6 +1945,7 @@ Hand-picked work, including some of my own, that anchors the four topics this fe
 
 
 
+
 ## 2026-05-11
 
 - ⭐ **[Exact Is Easier: Credit Assignment for Cooperative LLM Agents](https://arxiv.org/abs/2603.06859)** — Yanjun Chen, Yirong Sun, Hanlin Wang, et al. _[agent-simulation]_
@@ -1908,6 +2064,7 @@ Hand-picked work, including some of my own, that anchors the four topics this fe
   Multi-agent LLM systems studied empirically across topologies and benchmarks to understand collaboration effectiveness through entropy dynamics analysis.
 - **[Why Does Agentic Safety Fail to Generalize Across Tasks?](https://arxiv.org/abs/2605.06992)** — Yonatan Slutzky, Yotam Alexander, Tomer Slor, et al. _[agent-training-alignment]_
   Paper studies why safety generalization fails in multi-task agents, proving safety has higher complexity than task execution alone—a fundamental alignment failure mode.
+
 
 
 
@@ -2045,6 +2202,7 @@ Hand-picked work, including some of my own, that anchors the four topics this fe
 
 
 
+
 ## 2026-05-07
 
 - ⭐ **[Deployment-Relevant Alignment Cannot Be Inferred from Model-Level Evaluation Alone](https://arxiv.org/abs/2605.04454)** — Varad Vishwarupe, Nigel Shadbolt, Marina Jirotka, et al. _[agent-training-alignment]_
@@ -2131,6 +2289,7 @@ Hand-picked work, including some of my own, that anchors the four topics this fe
 
 
 
+
 ## 2026-05-06
 
 - ⭐ **[Descent-Guided Policy Gradient for Scalable Cooperative Multi-Agent Learning](https://arxiv.org/abs/2602.20078)** — Shan Yang, Yang Liu _[agent-simulation]_
@@ -2187,6 +2346,7 @@ Hand-picked work, including some of my own, that anchors the four topics this fe
   Multi-agent economy architecture enabling agent coordination, discovery, and economic interactions across autonomous agents in decentralized systems.
 - **[Where Paths Split: Localized, Calibrated Control of Moral Reasoning in Large Language Models](https://arxiv.org/abs/2605.03609)** — Chenchen Yuan, Zheyu Zhang, Gjergji Kasneci _[agent-training-alignment]_
   Interpretability method explicitly designed to detect and steer unsafe/misaligned moral reasoning pathways in LLMs via in-context intervention.
+
 
 
 
@@ -2366,6 +2526,7 @@ Hand-picked work, including some of my own, that anchors the four topics this fe
 
 
 
+
 ## 2026-05-04
 
 - ⭐ **[Causal Foundations of Collective Agency](https://arxiv.org/abs/2605.00248)** — Frederik Hytting Jørgensen, Sebastian Weichwald, Lewis Hammond _[agent-simulation, agent-training-alignment]_
@@ -2418,6 +2579,7 @@ Hand-picked work, including some of my own, that anchors the four topics this fe
   Post-training RLHF method explicitly framed as addressing reward over-optimization (Goodharting), a known alignment failure mode where proxy rewards diverge from true objectives.
 - **[Why Do LLMs Struggle in Strategic Play? Broken Links Between Observations, Beliefs, and Actions](https://arxiv.org/abs/2605.00226)** — Jan Sobotka, Mustafa O. Karabag, Ufuk Topcu _[agent-training-alignment]_
   Studies fundamental safety-relevant failure modes in LLM decision-making: belief-action misalignment under strategic uncertainty with interpretability analysis.
+
 
 
 
@@ -2541,6 +2703,7 @@ Hand-picked work, including some of my own, that anchors the four topics this fe
 
 
 
+
 ## 2026-04-30
 
 - **[Can LLM Agents Simulate Multi-Turn Human Behavior? Evidence from Real Online Customer Behavior Data](https://arxiv.org/abs/2503.20749)** — Yuxuan Lu, Jing Huang, Yan Han, et al. _[llm-agent-simulation]_
@@ -2597,6 +2760,7 @@ Hand-picked work, including some of my own, that anchors the four topics this fe
   Agent-based modeling of population-scale behavioral transitions using multi-agent framework with feedback mechanisms and emergent collective dynamics.
 - **[FutureWorld: A Live Environment for Training Predictive Agents with Real-World Outcome Rewards](https://arxiv.org/abs/2604.26733)** — Zhixin Han, Yanzhi Zhang, Chuyang Wei, et al. _[agent-simulation]_
   Proposes FutureWorld, a live environment for training multiple LLM agents with reinforcement learning feedback loops from real-world prediction outcomes.
+
 
 
 
@@ -2686,6 +2850,7 @@ _31 relevant papers · 4 starred_
   Multi-agent RL coordination study—multiple agents with distinct training conditions learning to cooperate zero-shot, core MARL problem.
 
 ---
+
 
 
 
