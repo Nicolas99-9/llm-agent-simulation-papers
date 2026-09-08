@@ -2,7 +2,7 @@
 
 Newest days appear first. For the grouped-by-tag index, see [README](./README.md).
 
-_4030 papers across 92 days · 590 with at least one ⭐._
+_4061 papers across 93 days · 598 with at least one ⭐._
 
 ---
 
